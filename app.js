@@ -2,7 +2,8 @@ var express = require('express');
 var sm = require('sitemap');
 
 var app = express();
-var port = 3000;
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
