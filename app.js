@@ -1,5 +1,8 @@
 var express = require('express');
 var sm = require('sitemap');
+var logger = require('morgan');
+var db = require('./db');
+var Posturls = db.getPosturls();
 
 var app = express();
 // process.env.PORT lets the port be set by Heroku
@@ -7,8 +10,7 @@ var port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
-
-var routes = require('./routes')(app);
+app.use(logger('dev'));
 
 
 var sitemap = sm.createSitemap ({
@@ -25,6 +27,10 @@ var sitemap = sm.createSitemap ({
       ]
     });
 
+for(i=0;i<Posturls.length;i++){
+  sitemap.urls.push({ url: Posturls[i],  changefreq: 'monthly',  priority: 0.7 },);
+}
+
 app.get('/sitemap.xml', function(req, res) {
   sitemap.toXML( function (err, xml) {
       if (err) {
@@ -34,6 +40,10 @@ app.get('/sitemap.xml', function(req, res) {
       res.send( xml );
   });
 });
+
+var routes = require('./routes')(app);
+
+
 
 app.listen(port,function(err){
   if(!err){

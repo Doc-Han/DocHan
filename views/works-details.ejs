@@ -16,7 +16,7 @@
 
 
 
-        <title>:: avana LLC ::</title>
+        <title><%= work[0].name %></title>
 
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -78,9 +78,9 @@
 
                             	<header role="work-title">
 
-                                	<h2>Project Name</h2>
+                                	<h2><%= work[0].name %></h2>
 
-                                    <a href="#">Visit online <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                    <a href="<%= work[0].url %>">Visit online <i class="fa fa-external-link" aria-hidden="true"></i></a>
 
                                 </header>
 
@@ -90,15 +90,13 @@
 
                             	<section>
 
-                                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat eu nibh ultricies semper. Vivamus porta, felis vitae facilisis sodales, felis est iaculis orci, et ornare sem mauris ut turpis. Pellentesque vitae tortor nec tellus hendrerit aliquam. Donec condimentum leo eu ull pellentesque urna rhoncus.</p>
-
-                                    <p>elis est iaculis orci, et ornare sem mauris ut turpis. Pellentesque vitae tortor nec tellus hendrerit aliquam. Donec condimentum leo eu ullamcorper scelerisque pellentes rhoncus.</p>
+                                	<%- work[0].description %>
 
 
 
-                                    <p><strong>Role</strong><br/>
+                                    <p><strong>Category</strong><br/>
 
-									Branding, Identity, Web Design, UX / UI</p>
+									<%= work[0].category %></p>
 
                                 </section>
 

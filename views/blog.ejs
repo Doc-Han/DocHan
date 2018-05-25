@@ -16,7 +16,7 @@
 
 
 
-        <title>:: avana LLC | Blog ::</title>
+        <title>:: Blog ::</title>
 
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -80,17 +80,19 @@
 
                     <ul class="grid-lod effect-2" id="grid">
 
+                      <% for(i=0;i<=6;i++){ %>
                         <li>
 
                             <section class="blog-content">
 
-                            	<a href="/post">
+                            	<a href="<%= post[i].title.split(' ').join('-') %>">
 
                                 <figure>
 
                                     <div class="post-date">
 
-                                        <span>24</span> July 2016
+                                        <!--<span>24</span> July 2016-->
+                                        <%= post[i].date %>
 
                                     </div>
 
@@ -102,133 +104,14 @@
 
                                 <article>
 
-                                    This is a sample news post title content or sample post heading.
+                                    <%= post[i].title %>
 
                                 </article>
 
                             </section>
 
                         </li>
-
-                        <li>
-
-                            <section class="blog-content">
-
-                            	<a href="/post">
-
-                                <figure>
-
-                                    <div class="post-date">
-
-                                        <span>24</span> July 2016
-
-                                    </div>
-
-                                    <img src="images/blog-images/blog-4.jpg" alt="" class="img-responsive"/>
-
-                                </figure>
-
-                                </a>
-
-                                <article>
-
-                                    This is a sample news post title content or sample post heading.
-
-                                </article>
-
-                            </section>
-
-                        </li>
-
-                        <li>
-
-                        	<section class="blog-content">
-
-                            	<a href="/post">
-
-                                <figure>
-
-                                    <div class="post-date">
-
-                                        <span>24</span> July 2016
-
-                                    </div>
-
-                                    <img src="images/blog-images/blog-2.jpg" alt="" class="img-responsive"/>
-
-                                </figure>
-
-                                </a>
-
-                                <article>
-
-                                    This is a sample news post title content or sample post heading.
-
-                                </article>
-
-                            </section>
-
-                        </li>
-
-                        <li>
-
-                        	<section class="blog-content">
-
-                            	<a href="/post">
-
-                                <figure>
-
-                                    <div class="post-date">
-
-                                        <span>24</span> July 2016
-
-                                    </div>
-
-                                    <img src="images/blog-images/blog-4.jpg" alt="" class="img-responsive"/>
-
-                                </figure>
-
-                                </a>
-
-                                <article>
-
-                                    This is a sample news post title content or sample post heading.
-
-                                </article>
-
-                            </section>
-
-                        </li>
-
-                        <li>
-
-                        	<section class="blog-content">
-
-                            	<a href="/post">
-
-                                <figure>
-
-                                    <div class="post-date">
-
-                                        <span>24</span> July 2016
-
-                                    </div>
-
-                                    <img src="images/blog-images/blog-2.jpg" alt="" class="img-responsive"/>
-
-                                </figure>
-
-                                </a>
-
-                                <article>
-
-                                    This is a sample news post title content or sample post heading.
-
-                                </article>
-
-                            </section>
-
-                        </li>
+                      <% } %>
 
                     </ul>
 
@@ -240,185 +123,37 @@
 
                 	<ul class="grid-lod effect-2" id="grid">
 
-                		<li>
+                		<% for(i=0; i<=6; i++){ %>
+                      <li>
 
-                        	<section class="blog-content">
+                          	<section class="blog-content">
 
-                            	<a href="/post">
+                              	<a href="<%= post[i].title.split(' ').join('-') %>">
 
-                                <figure>
+                                  <figure>
 
-                                    <div class="post-date">
+                                      <div class="post-date">
 
-                                        <span>24</span> July 2016
+                                          <%= post[i].date %>
 
-                                    </div>
+                                      </div>
 
-                                    <img src="images/blog-images/blog-1.jpg" alt="" class="img-responsive"/>
+                                      <img src="images/blog-images/blog-1.jpg" alt="" class="img-responsive"/>
 
-                                </figure>
+                                  </figure>
 
-                                </a>
+                                  </a>
 
-                                <article>
+                                  <article>
 
-                                    This is a sample news post title content or sample post heading.
+                                      <%= post[i].title %>
 
-                                </article>
+                                  </article>
 
-                            </section>
+                              </section>
 
-                    	</li>
-
-                    	<li>
-
-                   		 	<section class="blog-content">
-
-                            	<a href="/post">
-
-                                <figure>
-
-                                    <div class="post-date">
-
-                                        <span>24</span> July 2016
-
-                                    </div>
-
-                                    <img src="images/blog-images/blog-3.jpg" alt="" class="img-responsive"/>
-
-                                </figure>
-
-                                </a>
-
-                                <article>
-
-                                    This is a sample news post title content or sample post heading.
-
-                                </article>
-
-                            </section>
-
-                    	</li>
-
-                        <li>
-
-                    		<section class="blog-content">
-
-                            	<a href="/post">
-
-                                <figure>
-
-                                    <div class="post-date">
-
-                                        <span>24</span> July 2016
-
-                                    </div>
-
-                                    <img src="images/blog-images/blog-5.jpg" alt="" class="img-responsive"/>
-
-                                </figure>
-
-                                </a>
-
-                                <article>
-
-                                    This is a sample news post title content or sample post heading.
-
-                                </article>
-
-                            </section>
-
-                    	</li>
-
-                         <li>
-
-                            <section class="blog-content">
-
-                            	<a href="/post">
-
-                                <figure>
-
-                                    <div class="post-date">
-
-                                        <span>24</span> July 2016
-
-                                    </div>
-
-                                    <img src="images/blog-images/blog-1.jpg" alt="" class="img-responsive"/>
-
-                                </figure>
-
-                                </a>
-
-                                <article>
-
-                                    This is a sample news post title content or sample post heading.
-
-                                </article>
-
-                            </section>
-
-                        </li>
-
-                        <li>
-
-                            <section class="blog-content">
-
-                            	<a href="/post">
-
-                                <figure>
-
-                                    <div class="post-date">
-
-                                        <span>24</span> July 2016
-
-                                    </div>
-
-                                    <img src="images/blog-images/blog-3.jpg" alt="" class="img-responsive"/>
-
-                                </figure>
-
-                                </a>
-
-                                <article>
-
-                                    This is a sample news post title content or sample post heading.
-
-                                </article>
-
-                            </section>
-
-                        </li>
-
-                        <li>
-
-                        	<section class="blog-content">
-
-                            	<a href="/post">
-
-                                <figure>
-
-                                    <div class="post-date">
-
-                                        <span>24</span> July 2016
-
-                                    </div>
-
-                                    <img src="images/blog-images/blog-5.jpg" alt="" class="img-responsive"/>
-
-                                </figure>
-
-                                </a>
-
-                                <article>
-
-                                    This is a sample news post title content or sample post heading.
-
-                                </article>
-
-                            </section>
-
-                        </li>
+                      	</li>
+                    <% } %>
 
                     </ul>
 
