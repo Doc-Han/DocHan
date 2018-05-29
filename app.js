@@ -1,6 +1,6 @@
 var express = require('express');
 var sm = require('sitemap');
-var logger = require('morgan');
+//var logger = require('morgan');
 var db = require('./db');
 var Posturls = db.getPosturls();
 
@@ -10,7 +10,7 @@ var port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
-app.use(logger('dev'));
+//app.use(logger('dev'));
 
 
 var sitemap = sm.createSitemap ({
