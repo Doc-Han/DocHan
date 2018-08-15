@@ -3,9 +3,9 @@ var post = db.post;
 var work = db.work;
 
 module.exports = function(app){
-
+  var date = new Date();
   app.get('/',function(req,res){
-    res.render('index',{work: work});
+    res.render('index',{work: work,date:date});
   });
 
   app.get('/blog',function(req,res){
